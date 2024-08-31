@@ -52,15 +52,15 @@ const bool USER_MODE = true;
 //***************************************************************************//
 // We need to know about the drive mechanics.
 
-const float WHEEL_DIAMETER = 31.966; // 33.298; // Adjust on test
+const float WHEEL_DIAMETER = 32.00; //***// 31.966; // 33.298; // Adjust on test
 const float ENCODER_PULSES = 12.0;
-const float GEAR_RATIO = 11.4; // 19.54;
+const float GEAR_RATIO = 29.8609; //***// 11.4; // 19.54;
 
 // Mouse radius is the distance between the contact patches of the drive wheels.
 // A good starting approximation is half the distance between the wheel centres.
 // After testing, you may find the working value to be larger or smaller by some
 // small amount.
-const float MOUSE_RADIUS = 37.92; // 39.50; // Adjust on test
+const float MOUSE_RADIUS = 78.00 / 2; //***// 37.92; // 39.50; // Adjust on test
 
 // The robot is likely to have wheels of different diameters and that must be
 // compensated for if the robot is to reliably drive in a straight line
@@ -107,12 +107,12 @@ const float BATTERY_MULTIPLIER = (ADC_REF_VOLTS / ADC_FSR / BATTERY_DIVIDER_RATI
 //*** MOTION CONTROL CONSTANTS **********************************************//
 
 // forward motion controller constants
-const float FWD_KP = 2.0;
-const float FWD_KD = 1.1;
+const float FWD_KP = 0.6118056; //***// 2.0;
+const float FWD_KD = 1.605505; //***// 1.1;
 
 // rotation motion controller constants
-const float ROT_KP = 2.1;
-const float ROT_KD = 1.2;
+const float ROT_KP = 1.454985; //***// 2.1;
+const float ROT_KD = 3.5; //***// 1.2;
 
 // controller constants for the steering controller
 const float STEERING_KP = 0.25;
@@ -136,8 +136,8 @@ const float STEERING_ADJUST_LIMIT = 10.0; // deg/s
  * That minimum voltage is the BIAS_FF. It is not dependent upon speed but is expressed
  * here as a fraction for comparison.
  */
-const float SPEED_FF = (1.0 / 280.0);
-const float BIAS_FF = (23.0 / 280.0);
+const float SPEED_FF = (1.0 / 872.0); //***// (1.0 / 280.0);
+const float BIAS_FF = 0.224; //***// (23.0 / 280.0);
 
 // encoder polarity is set to account for reversal of the encoder phases
 const int ENCODER_LEFT_POLARITY = (-1);
@@ -146,8 +146,8 @@ const int ENCODER_RIGHT_POLARITY = (1);
 // similarly, the motors may be wired with different polarity and that
 // is defined here so that setting a positive voltage always moves the robot
 // forwards
-const int MOTOR_LEFT_POLARITY = (1);
-const int MOTOR_RIGHT_POLARITY = (-1);
+const int MOTOR_LEFT_POLARITY = (-1); //***//
+const int MOTOR_RIGHT_POLARITY = (1); //***//
 
 //***************************************************************************//
 
@@ -225,7 +225,7 @@ const uint8_t MOTOR_RIGHT_DIR = 8;
 const uint8_t MOTOR_LEFT_PWM = 9;
 const uint8_t MOTOR_RIGHT_PWM = 10;
 const uint8_t LED_LEFT = 11; // an alias for EMITTER_B
-const uint8_t EMITTER_A = 11;
+const uint8_t EMITTER_A = A3; //***//Sensor frontal 11;
 const uint8_t EMITTER_B = 12;
 const uint8_t EMITTER = 12; // alias for pin 12
 
