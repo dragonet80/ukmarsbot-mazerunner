@@ -183,7 +183,7 @@ const float RIGHT_SCALE = (float)RIGHT_NOMINAL / RIGHT_CALIBRATION;
 const int LEFT_THRESHOLD = 40;   // minimum value to register a wall
 const int FRONT_THRESHOLD = 20;  // minimum value to register a wall
 const int RIGHT_THRESHOLD = 40;  // minimum value to register a wall
-const int FRONT_REFERENCE = 850; // reading when mouse centered with wall ahead
+const int FRONT_REFERENCE = 320; //***// 850; // reading when mouse centered with wall ahead
 //***************************************************************************//
 //***************************************************************************//
 // Some physical constants that are likely to be board -specific
@@ -199,7 +199,7 @@ const float LOOP_INTERVAL = (1.0 / LOOP_FREQUENCY);
 
 //***************************************************************************//
 // change the revision if the settings structure changes to force rewrte of EEPROM
-const int SETTINGS_REVISION = 107;
+const int SETTINGS_REVISION = 108;
 const uint32_t BAUDRATE = 115200;
 const int DEFAULT_DECIMAL_PLACES = 5;
 const int EEPROM_ADDR_SETTINGS = 0x0000;
