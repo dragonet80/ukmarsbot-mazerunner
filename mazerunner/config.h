@@ -140,14 +140,22 @@ const float SPEED_FF = (1.0 / 872.0); //***// (1.0 / 280.0);
 const float BIAS_FF = 0.224; //***// (23.0 / 280.0);
 
 // encoder polarity is set to account for reversal of the encoder phases
-const int ENCODER_LEFT_POLARITY = (-1);
-const int ENCODER_RIGHT_POLARITY = (1);
+// ** JR ** //
+const int ENCODER_LEFT_POLARITY = (1);
+const int ENCODER_RIGHT_POLARITY = (-1);
+// ** Vicent **//
+//const int ENCODER_LEFT_POLARITY = (-1);
+//const int ENCODER_RIGHT_POLARITY = (1);
 
 // similarly, the motors may be wired with different polarity and that
 // is defined here so that setting a positive voltage always moves the robot
 // forwards
+// ** JR ** //
 const int MOTOR_LEFT_POLARITY = (-1); //***//
 const int MOTOR_RIGHT_POLARITY = (1); //***//
+// ** Vicent **//
+//const int MOTOR_LEFT_POLARITY = (-1); //***//
+//const int MOTOR_RIGHT_POLARITY = (1); //***//
 
 //***************************************************************************//
 
