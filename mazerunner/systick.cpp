@@ -21,6 +21,20 @@
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
  *
+474845464344404142383936373435313233293027282425262223
+  update_battery_voltage();
+  forward.update();
+  rotation.update();
+  g_cross_track_error = update_wall_sensors();
+  g_steering_adjustment = calculate_steering_adjustment(g_cross_track_error);
+  update_motor_controllers(g_steering_adjustment);
+  start_sensor_cycle();
+  // NOTE: no code should follow this line;
+}
+
+Not connected. Select a board and a port to connect automatically.
+Carriage Return
+
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -47,6 +61,16 @@ void setup_systick() {
   bitSet(TCCR2B, CS20);
   OCR2A = 249; // (16000000/128/500)-1 => 500Hz
   bitSet(TIMSK2, OCIE2A);
+
+  // // 77 = Valor per a 5 ms:
+  // TCCR2A  = 0;           // Init Timer2A
+  // TCCR2B  = 0;           // Init Timer2B
+  // TCNT2   = 0;
+  // OCR2A   = 77;        // Timer Compare2A Register
+  // TCCR2B  = (1<<CS22) | (1<<CS21) | (1<<CS20);
+  // //TCCR2B |= B00000111;  // Prescaler = ? 
+  // TCCR2A  |= (1<<WGM21);
+  // TIMSK2  |= (1<<OCIE2A);
 }
 
 /***

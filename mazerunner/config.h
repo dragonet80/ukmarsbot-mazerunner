@@ -141,21 +141,21 @@ const float BIAS_FF = 0.224; //***// (23.0 / 280.0);
 
 // encoder polarity is set to account for reversal of the encoder phases
 // ** JR ** //
-const int ENCODER_LEFT_POLARITY = (1);
-const int ENCODER_RIGHT_POLARITY = (-1);
+// const int ENCODER_LEFT_POLARITY = (-1);
+// const int ENCODER_RIGHT_POLARITY = (1);
 // ** Vicent **//
-//const int ENCODER_LEFT_POLARITY = (-1);
-//const int ENCODER_RIGHT_POLARITY = (1);
+const int ENCODER_LEFT_POLARITY = (-1);
+const int ENCODER_RIGHT_POLARITY = (1);
 
 // similarly, the motors may be wired with different polarity and that
 // is defined here so that setting a positive voltage always moves the robot
 // forwards
 // ** JR ** //
+// const int MOTOR_LEFT_POLARITY = (1); //***//
+// const int MOTOR_RIGHT_POLARITY = (-1); //***//
+// ** Vicent **//
 const int MOTOR_LEFT_POLARITY = (-1); //***//
 const int MOTOR_RIGHT_POLARITY = (1); //***//
-// ** Vicent **//
-//const int MOTOR_LEFT_POLARITY = (-1); //***//
-//const int MOTOR_RIGHT_POLARITY = (1); //***//
 
 //***************************************************************************//
 
@@ -163,8 +163,8 @@ const int MOTOR_RIGHT_POLARITY = (1); //***//
 // search and run speeds in mm/s and mm
 const float DEFAULT_TURN_SPEED = 300;
 const float DEFAULT_SEARCH_SPEED = 400;
-const float DEFAULT_MAX_SPEED = 800;
-const float DEFAULT_SEARCH_ACCEL = 2000;
+const float DEFAULT_MAX_SPEED = 600; // 800;
+const float DEFAULT_SEARCH_ACCEL = 1000; // 2000;
 //***************************************************************************//
 
 //***** SENSOR CALIBRATION **************************************************//
@@ -202,12 +202,12 @@ const int BACK_WALL_TO_CENTER = 48;
 //***************************************************************************//
 
 // Control loop timing. Pre-calculate to save time in interrupts
-const float LOOP_FREQUENCY = 500.0;
+const float LOOP_FREQUENCY = 500.0; // 500.0;
 const float LOOP_INTERVAL = (1.0 / LOOP_FREQUENCY);
 
 //***************************************************************************//
 // change the revision if the settings structure changes to force rewrte of EEPROM
-const int SETTINGS_REVISION = 108;
+const int SETTINGS_REVISION = 110;
 const uint32_t BAUDRATE = 115200;
 const int DEFAULT_DECIMAL_PLACES = 5;
 const int EEPROM_ADDR_SETTINGS = 0x0000;

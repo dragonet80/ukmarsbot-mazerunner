@@ -31,7 +31,7 @@
 
 #define MAZE_WIDTH 16
 #define MAZE_CELLS (MAZE_WIDTH * MAZE_WIDTH)
-#define GOAL 0x77
+#define GOAL 0x31 //77
 #define START 0x00
 
 // directions for mapping
