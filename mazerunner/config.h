@@ -60,11 +60,11 @@ const float GEAR_RATIO = 29.8609; //***// 11.4; // 19.54;
 // A good starting approximation is half the distance between the wheel centres.
 // After testing, you may find the working value to be larger or smaller by some
 // small amount.
-const float MOUSE_RADIUS = 78.00 / 2; //***// 37.92; // 39.50; // Adjust on test
+const float MOUSE_RADIUS = 76.00 / 2; //***// 37.92; // 39.50; // Adjust on test
 
 // The robot is likely to have wheels of different diameters and that must be
 // compensated for if the robot is to reliably drive in a straight line
-const float ROTATION_BIAS = 0.0025; // Negative makes robot curve to left
+const float ROTATION_BIAS = 0.0; //0.0025; // Negative makes robot curve to left
 
 //***************************************************************************//
 
@@ -96,7 +96,7 @@ const float HALF_CELL = FULL_CELL / 2.0;
 // battery voltage calulation is done as efficiently as possible.
 // The compiler will do all these calculations so your program does not have to.
 
-const float BATTERY_R1 = 10000.0; // resistor to battery +
+const float BATTERY_R1 = 12600.0; // resistor to battery +
 const float BATTERY_R2 = 10000.0; // resistor to Gnd
 const float BATTERY_DIVIDER_RATIO = BATTERY_R2 / (BATTERY_R1 + BATTERY_R2);
 const float ADC_FSR = 1023.0;    // The maximum reading for the ADC
@@ -162,7 +162,7 @@ const int MOTOR_RIGHT_POLARITY = (1); //***//
 //***** PERFORMANCE CONSTANTS************************************************//
 // search and run speeds in mm/s and mm
 const float DEFAULT_TURN_SPEED = 300;
-const float DEFAULT_SEARCH_SPEED = 400;
+const float DEFAULT_SEARCH_SPEED = 300;//400;
 const float DEFAULT_MAX_SPEED = 600; // 800;
 const float DEFAULT_SEARCH_ACCEL = 1000; // 2000;
 //***************************************************************************//
@@ -197,7 +197,7 @@ const int FRONT_REFERENCE = 320; //***// 850; // reading when mouse centered wit
 // Some physical constants that are likely to be board -specific
 
 // with robot against back wall, how much travel is there to the cell center?
-const int BACK_WALL_TO_CENTER = 48;
+const int BACK_WALL_TO_CENTER = 34;//48;
 
 //***************************************************************************//
 
@@ -207,14 +207,14 @@ const float LOOP_INTERVAL = (1.0 / LOOP_FREQUENCY);
 
 //***************************************************************************//
 // change the revision if the settings structure changes to force rewrte of EEPROM
-const int SETTINGS_REVISION = 110;
+const int SETTINGS_REVISION = 112;
 const uint32_t BAUDRATE = 115200;
 const int DEFAULT_DECIMAL_PLACES = 5;
 const int EEPROM_ADDR_SETTINGS = 0x0000;
 
 //***************************************************************************//
 // set this to zero to disable profile data logging over serial
-#define DEBUG_LOGGING 0
+#define DEBUG_LOGGING 1
 // time between logged lined when reporting is enabled (milliseconds)
 const int REPORTING_INTERVAL = 10;
 
