@@ -161,8 +161,8 @@ const int MOTOR_RIGHT_POLARITY = (1); //***//
 
 //***** PERFORMANCE CONSTANTS************************************************//
 // search and run speeds in mm/s and mm
-const float DEFAULT_TURN_SPEED = 300;
-const float DEFAULT_SEARCH_SPEED = 300;//400;
+const float DEFAULT_TURN_SPEED = 200;
+const float DEFAULT_SEARCH_SPEED = 200;//400;
 const float DEFAULT_MAX_SPEED = 600; // 800;
 const float DEFAULT_SEARCH_ACCEL = 1000; // 2000;
 //***************************************************************************//
@@ -207,7 +207,7 @@ const float LOOP_INTERVAL = (1.0 / LOOP_FREQUENCY);
 
 //***************************************************************************//
 // change the revision if the settings structure changes to force rewrte of EEPROM
-const int SETTINGS_REVISION = 112;
+const int SETTINGS_REVISION = 113;
 const uint32_t BAUDRATE = 115200;
 const int DEFAULT_DECIMAL_PLACES = 5;
 const int EEPROM_ADDR_SETTINGS = 0x0000;
